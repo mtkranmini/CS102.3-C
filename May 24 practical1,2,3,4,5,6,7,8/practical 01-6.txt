@@ -1,0 +1,14 @@
+     //declare the variables
+     char Name[20];
+     int Byear,Age; 
+     //input
+     printf("Enter Your Name");
+     scanf("%s",&Name);
+
+     printf("Enter Birthday year");
+     scanf("%d",&Byear);
+     //process
+     Age=2023-Byear;
+     //output
+     printf("hey you are %d years old",Age);
+     printf("hey you are %s \n",Name);

@@ -1,0 +1,12 @@
+    int a;
+    float b;
+    double cc; 
+    char dd;
+    printf("enter the integer");
+    scanf("%d",&a);
+    printf("enter the float");
+    scanf("%f",&b);
+    printf("enter the double");
+    scanf("%lf",&cc);
+    printf("enter the char");
+    scanf("%s",&dd);

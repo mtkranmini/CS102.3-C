@@ -1,0 +1,15 @@
+//declear variables
+    int X,Y;
+    //input
+    printf("Enter First Value:\n");
+    scanf("%d",&X);
+    printf("Enter Second Value:\n");
+    scanf("%d",&Y);
+    //output 01
+    printf("Before swapping:First value is %d\n,second value is %d\n",X,Y);
+    //process
+    int temp=X;
+    X=Y;
+    Y=temp;
+    //output 2
+    printf("After swapping:first number is %d\n,second number is %d\n"X,Y);

@@ -1,0 +1,12 @@
+    //declare the variables
+     float no1,no2,Average;
+     //input
+     printf("Enter First Number");
+     scanf("%f",&No1);
+     printf("Enter Second Number");
+     scanf("%f",&no2);
+     //process
+     Average=(No1+No2)/2;
+     //output
+     printf("The Average is %f\n",Average);
+

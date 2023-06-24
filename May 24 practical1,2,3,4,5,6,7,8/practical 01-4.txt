@@ -1,0 +1,11 @@
+//declare the variables
+     int No1,No2,Total;
+     //input
+     printf("Enter First Number");
+     scanf("%d",&No1);
+     printf("Enter Second Number");
+     scanf("%d",&No2);
+     //process
+     Total=(No1+No2);
+     //output
+     printf("The Total is %d\n",Total);
