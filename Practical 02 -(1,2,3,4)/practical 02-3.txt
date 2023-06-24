@@ -1,0 +1,7 @@
+    float avaragespeed,distancetravelled,timetaken;
+    printf("enter distance");
+    scanf("%d",&distancetravelled); 
+    printf("enter the time taken ");
+    scanf("%d",&timetaken);
+    avaragespeed=distancetravelled/timetaken;
+    printf("average speed is %d",avaragespeed);

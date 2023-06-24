@@ -1,0 +1,5 @@
+    //01
+    int age;
+    printf("HI, HOW OLD ARE YOU?");
+    scanf("%d",&age);
+    printf(" \n\n WELCOME %d\nLET\'S Be FRIEND!\n",age);
