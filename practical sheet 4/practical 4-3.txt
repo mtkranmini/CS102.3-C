@@ -1,0 +1,40 @@
+#include <stdio.h>
+#define PI 3.14159
+
+int main() {
+    int choice;
+    double radius;
+
+    printf("Menu:\n");
+    printf("1. Calculate the circumference of a circle\n");
+    printf("2. Calculate the area of a circle\n");
+    printf("3. Calculate the volume of a sphere\n");
+    printf("Enter your choice (1-3): ");
+    scanf("%d", &choice);
+
+    printf("Enter the radius: ");
+    scanf("%lf", &radius);
+
+    switch (choice) {
+        case 1: {
+            double circumference = 2 * PI * radius;
+            printf("Circumference of the circle: %.2f\n", circumference);
+            break;
+        }
+        case 2: {
+            double area = PI * radius * radius;
+            printf("Area of the circle: %.2f\n", area);
+            break;
+        }
+        case 3: {
+            double volume = (4.0 / 3.0) * PI * radius * radius * radius;
+            printf("Volume of the sphere: %.2f\n", volume);
+            break;
+        }
+        default:
+            printf("Invalid choice!\n");
+    }
+
+    return 0;
+}
+
