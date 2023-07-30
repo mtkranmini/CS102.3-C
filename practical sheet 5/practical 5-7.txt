@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int i, n;
+    int fib[10]; // Array to store Fibonacci numbers
+
+    // First two numbers of the Fibonacci sequence
+    fib[0] = 0;
+    fib[1] = 1; 
+
+    // Generate Fibonacci sequence
+    for (i = 2; i < 10; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+
+    // Print the Fibonacci sequence
+    printf("First 10 numbers of the Fibonacci sequence:\n");
+    for (i = 0; i < 10; i++) {
+        printf("%d ", fib[i]);
+    }
+
+    return 0;
+}

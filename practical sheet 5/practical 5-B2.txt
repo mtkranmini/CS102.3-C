@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() { 
+    int marks[10];
+    int i;
+    int maxMark, minMark, totalMarks = 0;
+    float averageMark;
+
+    printf("Enter marks of 10 students:\n");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &marks[i]);
+
+        totalMarks += marks[i];
+
+        if (i == 0) {
+            maxMark = marks[i];
+            minMark = marks[i];
+        } else {
+            if (marks[i] > maxMark) {
+                maxMark = marks[i];
+            }
+            if (marks[i] < minMark) {
+                minMark = marks[i];
+            }
+        }
+    }
+
+    averageMark = (float)totalMarks / 10;
+
+    printf("Maximum mark: %d\n", maxMark);
+    printf("Minimum mark: %d\n", minMark);
+    printf("Average mark: %.2f\n", averageMark);
+
+    return 0;
+}

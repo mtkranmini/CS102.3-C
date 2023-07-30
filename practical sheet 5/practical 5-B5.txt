@@ -1,0 +1,49 @@
+#include <stdio.h>
+#define OVERTIME_RATE_NORMAL 150
+#define OVERTIME_RATE_EXTRA 200
+#define THRESHOLD_PAYMENT 4000
+int main() {
+    int employeeNo;
+    float hoursWorked;
+    float overtimePayment;
+    int countExceedingPayment = 0;
+    int totalEmployees = 0;
+
+    printf ("Enter the employee number and hours worked (enter -999 for employee number to stop):\n");
+
+    while (1) {
+        printf("Employee number: ");
+        scanf("%d", &employeeNo);
+
+        if (employeeNo == -999) {
+            break;
+        }
+
+        printf("Hours worked: ");
+        scanf("%f", &hoursWorked);
+
+        overtimePayment = 0;
+
+        if (hoursWorked > 40) {
+            float overtimeHours = hoursWorked - 40;
+            overtimePayment = (40 * OVERTIME_RATE_NORMAL) + (overtimeHours * OVERTIME_RATE_EXTRA);
+        } else {
+            overtimePayment = hoursWorked * OVERTIME_RATE_NORMAL;
+        }
+
+        printf("Employee number: %d\n", employeeNo);
+        printf("Overtime payment: %.2f\n", overtimePayment);
+
+        if (overtimePayment > THRESHOLD_PAYMENT) {
+            countExceedingPayment++;
+        }
+
+        totalEmployees++;
+    }
+
+    float percentageExceedingPayment = ((float)countExceedingPayment / totalEmployees) * 100;
+
+    printf("Percentage of employees with overtime payment exceeding Rs. 4000: %.2f%%\n", percentageExceedingPayment);
+
+    return 0;
+}

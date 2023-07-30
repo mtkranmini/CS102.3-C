@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    float prices[10];
+    int i;
+    float totalPrice = 0;
+    float averagePrice;
+    int countGreaterThan200 = 0;
+
+    printf("Enter prices of 10 items:\n");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%f", &prices[i]);
+
+        totalPrice += prices[i];
+
+        if (prices[i] > 200) {
+            countGreaterThan200++;
+        }
+    }
+
+    averagePrice = totalPrice / 10;
+
+    printf("Average price of an item: %.2f\n", averagePrice);
+    printf("Number of items with price greater than 200: %d\n", countGreaterThan200);
+
+    return 0;

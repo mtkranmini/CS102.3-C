@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int array[10];
+    int i, count = 0;
+
+    printf("Enter 10 integers:\n");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &array[i]);
+        if (array[i] % 2 == 0) {
+            count++;
+        }
+    }
+
+    printf("Count of even numbers: %d\n", count);
+
+    return 0;
+}
